@@ -1,5 +1,7 @@
 # BRE information sources
 
+## All sources table
+
 | Service name | Type | Comment | Has disable flag |
 | -- | -- | -- | -- |
 | WebInvoice (customer info) |Internal - core | | No - but we are returning empty response for new customers |
@@ -14,12 +16,15 @@
 | SAT | External |
 | VRK | External | SSL certificate installation needed |
 
+## Existing flags
 
+### Finland
 
-
-Disbale Balance service
+Disable Balance service
 Disable Lis backup
 
+## Collection system situation
 
-CCS FI - no collection, empty result is returned. Can be converted to flag, since currently we are using decision exception to skip check
-CCS DK - we are using decision exception to skip check, lack of data fails the decision. 
+- CCS FI - no collection, empty result is returned. Can be converted to flag, since currently we are using decision exception to skip check
+- CCS DK - we are using decision exception to skip check, lack of data fails the decision.
+- CCS SE - we are using decision exception to skip check, empty result with SuccessfulSearch = true skips check. The same used in Pre Credit SE
